@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dreamy Delights</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/style.css">
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body{
+	font-family: 'Roboto', sans-serif;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+i {
+	margin-right: 10px;
+}
+
+/*------------------------*/
+input:focus,
+button:focus,
+.form-control:focus{
+	outline: none;
+	box-shadow: none;
+}
+.form-control:disabled, .form-control[readonly]{
+	background-color: #fff;
+}
+.table tr,
+.table tr td{
+	vertical-align: middle;
+}
+.button-container{
+	display: flex;
+	align-items: center;
+}
+.button-container .form-control{
+	max-width: 80px;
+	text-align: center;
+	display: inline-block;
+	margin: 0px 5px;
+}
+#myTable .form-control{
+	width: auto;
+	display: inline-block;
+}
+.cart-qty-plus,
+.cart-qty-minus{
+	width: 38px;
+	height: 38px;
+	background-color: #fff;
+	border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+.cart-qty-plus:hover,
+.cart-qty-minus:hover{
+	background-color: #5161ce;
+	color: #fff;
+}
+.img-prdct{
+	width: 50px;
+	height: 50px;
+	background-color: #5161ce;
+	border-radius: 4px;
+}
+.img-prdct img{
+  width: 100%;
+}
+</style>
+	
+	
+  </head>
+  <body>
+  	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Dreamy<small>Delights</small></a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
+	          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+	          <li class="nav-item"><a href="Blog.html" class="nav-link">Blog</a></li>
+	           <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+              <li class="nav-item"><a href="Log in.html" class="nav-link">Log in</a></li>
+	          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="room.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+              	<a class="dropdown-item" href="shop.html">Shop</a>
+                <a class="dropdown-item" href="product-single.html">Single Product</a>
+                <!-- <a class="dropdown-item" href="cart.html">Cart</a> -->
+                <a class="dropdown-item" href="checkout.html">Checkout</a>
+              </div>
+            </li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	          <li class="nav-item cart"><a href="cart.html" class="nav-link"><span class="icon icon-shopping_cart"></span><span class="bag d-flex justify-content-center align-items-center"><small>1</small></span></a></li>
+	        </ul>
+	      </div>
+		  </div>
+	  </nav>
+    <!-- END nav -->
+
+    <section class="home-slider owl-carousel">
+
+      <div class="slider-item" style="background-image: url(images/bg_3.jpg);" data-stellar-background-ratio="0.5">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text justify-content-center align-items-center">
+
+            <div class="col-md-7 col-sm-12 text-center ftco-animate">
+            	<h1 class="mb-3 mt-5 bread">Cart</h1>
+	            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Cart</span></p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+	</section>
+	<div class="container-fluid mt-5">
+        <h2 class="mb-5 text-center">Shopping Cart</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="table-responsive">
+                    <table id="myTable" class="table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Name</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                                <th class="text-right"><span id="amount" class="amount">Amount</span> </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="product-img">
+                                        <div class="img-prdct"><img src="images/menu-1.jpg"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p>Coffee Capuccino</p>
+                                </td>
+                                <td>
+                                    <div class="button-container">
+                                        <button class="cart-qty-plus" type="button" value="+">+</button>
+                                        <input type="text" name="qty" min="0" class="qty form-control" value="0"/>
+                                        <button class="cart-qty-minus" type="button" value="-">-</button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <input type="text" value="72" class="price form-control" disabled>
+                                </td>
+                                <td align="right">$ <span id="amount" class="amount">0</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="product-img">
+                                        <div class="img-prdct"><img src="images/menu-2.jpg"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p>Americano</p>
+                                </td>
+                                <td>
+                                    <div class="button-container">
+                                        <button class="cart-qty-plus" type="button" value="+">+</button>
+                                        <input type="text" name="qty" min="0" class="qty form-control" value="0"/>
+                                        <button class="cart-qty-minus" type="button" value="-">-</button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <input type="text" value="125" class="price form-control" disabled>
+                                </td>
+                                <td align="right">$ <span id="amount" class="amount">0</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="product-img">
+                                        <div class="img-prdct"><img src="images/dish-1.jpg"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p>Chocolate Cupcake</p>
+                                </td>
+                                <td>
+                                    <div class="button-container">
+                                        <button class="cart-qty-plus" type="button" value="+">+</button>
+                                        <input type="text" name="qty" min="0" class="qty form-control" value="0"/>
+                                        <button class="cart-qty-minus" type="button" value="-">-</button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <input type="text" value="250" class="price form-control" disabled>
+                                </td>
+                                <td align="right">$ <span id="amount" class="amount">0</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="product-img">
+                                        <div class="img-prdct"><img src="images/dessert-3.jpg"></div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <p>Mixed Fruit Tart</p>
+                                </td>
+                                <td>
+                                    <div class="button-container">
+                                        <button class="cart-qty-plus" type="button" value="+">+</button>
+                                        <input type="text" name="qty" min="0" class="qty form-control" value="0"/>
+                                        <button class="cart-qty-minus" type="button" value="-">-</button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <input type="text" value="300" class="price form-control" disabled>
+                                </td>
+                                <td align="right">$ <span id="amount" class="amount">0</span></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="4"></td><td align="right"><strong>TOTAL = $  <span id="total" class="total">0</span></strong></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+		
+		<section class="ftco-section ftco-cart">
+			<!--  
+			<div class="container">
+				<div class="row">
+    			<div class="col-md-12 ftco-animate">
+    				<div class="cart-list">
+	    				<table class="table">
+						    <thead class="thead-primary">
+						      <tr class="text-center">
+						        <th>&nbsp;</th>
+						        <th>&nbsp;</th>
+						        <th>Product</th>
+						        <th>Price</th>
+						        <th>Quantity</th>
+						        <th>Total</th>
+						      </tr>
+						    </thead>
+						    <tbody>
+								<div>
+						      <tr class="text-center">
+								<td class="product-remove"><a href="#"><span class="icon-close"></span></a></td> 						        
+						        <td class="image-prod"><div class="img" style="background-image:url(images/menu-2.jpg);"></div></td>
+						        
+						        <td class="product-name">
+						        	<h3>Creamy Latte Coffee</h3>
+						        	<p>Far far away, behind the word mountains, far from the countries</p>
+						        </td>
+						        
+						        <td class="price">$4.90</td>
+						        
+						        <td class="quantity">
+						        	<div class="input-group mb-3">
+					             	<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
+					          	</div>
+							  </td>
+							  
+							  
+							  <td class="total">$4.90</td>
+							   <!-- <td class="product-remove"><button class="btn btn-danger" type="button">REMOVE</button></td> --> -->
+							  <!-- </tr> 
+							  </div><!-- END TR-->
+							  <!-- <div> 
+
+						      <tr class="text-center">
+						        <td class="product-remove"><a href="#"><span class="icon-close"></span></a></td>
+						        
+						        <td class="image-prod"><div class="img" style="background-image:url(images/dish-2.jpg);"></div></td>
+						        
+						        <td class="product-name">
+						        	<h3>Chocolate pancake</h3>
+						        	<p>Far far away, behind the word mountains, far from the countries</p>
+						        </td>
+						        
+						        <td class="price">$15.70</td>
+						        
+						        <td class="quantity">
+						        	<div class="input-group mb-3">
+					             	<input type="text" name="quantity" class="quantity form-control input-number" value="1" min="1" max="100">
+					          	</div>
+					          </td>
+						        
+								<td class="total">$15.70</td>
+								<!-- <td class="product-remove"><button class="btn btn-danger" type="button">REMOVE</button></td> -->
+
+							  <!-- </tr> 
+							  </div>
+							  <!-- END TR-->
+						    <!-- </tbody> >
+						  </table>
+					  </div>
+    			</div>
+			</div>-->
+			<!-- EXTERNAL PART -->
+    		<div class="row justify-content-end">
+    			<div class="col col-lg-3 col-md-6 mt-5 cart-wrap ftco-animate">
+    				<!-- <div class="cart-total mb-3"> 
+    					<h3>Cart Totals</h3>
+    					<p class="d-flex">
+    						<span>Subtotal</span>
+    						<span>$20.60</span>
+    					</p>
+    					<p class="d-flex">
+    						<span>Delivery</span>
+    						<span>$0.00</span>
+    					</p>
+    					<p class="d-flex">
+    						<span>Discount</span>
+    						<span>$3.00</span>
+    					</p>
+    					<hr>
+    					<p class="d-flex total-price">
+    						<span>Total</span>
+    						<span>$17.60</span>
+    					</p>
+    				</div>
+    				<p class="text-center"><a href="checkout.html" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p>-->
+    			</div>
+    		</div>
+			</div>
+		</section>
+	<!-- EXTERNAL WORK -->
+	
+
+
+
+
+
+
+    <section class="ftco-section">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+          	<span class="subheading">Discover</span>
+            <h2 class="mb-4">Most Popular products</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+          </div>
+        </div>
+        <div class="row">
+        	<div class="col-md-3">
+        		<div class="menu-entry">
+    					<a href="#" class="img" style="background-image: url(images/menu-1.jpg);"></a>
+    					<div class="text text-center pt-4">
+    						<h3><a href="#">Coffee Capuccino</a></h3>
+    						<p>A small river named Duden flows by their place and supplies</p>
+    						<p class="price"><span>$5.90</span></p>
+    						<p><a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
+    					</div>
+    				</div>
+        	</div>
+        	<div class="col-md-3">
+        		<div class="menu-entry">
+    					<a href="#" class="img" style="background-image: url(images/menu-2.jpg);"></a>
+    					<div class="text text-center pt-4">
+    						<h3><a href="#">Americana</a></h3>
+    						<p>A small river named Duden flows by their place and supplies</p>
+    						<p class="price"><span>$5.90</span></p>
+    						<p><a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
+    					</div>
+    				</div>
+        	</div>
+        	<div class="col-md-3">
+        		<div class="menu-entry">
+    					<a href="#" class="img" style="background-image: url(images/menu-3.jpg);"></a>
+    					<div class="text text-center pt-4">
+    						<h3><a href="#">Cold Coffee</a></h3>
+    						<p>A small river named Duden flows by their place and supplies</p>
+    						<p class="price"><span>$5.90</span></p>
+    						<p><a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
+    					</div>
+    				</div>
+        	</div>
+        	<div class="col-md-3">
+        		<div class="menu-entry">
+    					<a href="#" class="img" style="background-image: url(images/menu-4.jpg);"></a>
+    					<div class="text text-center pt-4">
+    						<h3><a href="#">Latte</a></h3>
+    						<p>A small river named Duden flows by their place and supplies</p>
+    						<p class="price"><span>$5.90</span></p>
+    						<p><a href="#" class="btn btn-primary btn-outline-primary">Add to Cart</a></p>
+    					</div>
+    				</div>
+        	</div>
+        </div>
+    	</div>
+    </section>
+    <!-- FOOTER -->
+
+    <!-- FOOTER -->
+    <footer class="ftco-footer ftco-section img">
+    	<div class="overlay"></div>
+      <div class="container">
+		<div data-aos="fade-up">
+        <div class="row mb-5">
+          <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">About Us</h2>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="https://twitter.com/login?lang=en"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Mirpur Cantonment,Mirpur</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">01757403666</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">dreamydelights@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+         
+          <div class="col-lg-6 col-md-10 mb-9 mb-md-9">
+             <div class="ftco-footer-widget mb-4 ml-md-4">
+                <div id="login">
+                    <form id="login_form">
+                      <div class="field_container">
+                        <input type="text" placeholder="Email Address">
+                      </div>
+                      
+                      <div class="field_container">
+                        <input type="Password" placeholder="Password">
+                        
+                      </div>
+                      <div class="sig">
+                        <button id="sign_in_button">
+                            <span class="button_text">Sign In</span>
+                          </button>
+                      </div>
+                      
+                      <div id="sign_in_options" class="field_container">
+                          <div id="sign_in_alternatives_container">
+                            <!-- <span id="google_sign_in_option">or you can <a href="#" id="google_sign_in" class="login_link">sign in with Google</a></span> -->
+                            <span id="password_sign_in_option">or you can <a href="#" id="password_sign_in" class="login_link">sign in using a password</a></span>
+                          </div>
+                          <div id="remember_me_container">
+                            <input name="user[remember_me]" type="hidden" value="0"><input id="user_remember_me" name="user[remember_me]" type="checkbox" value="1">
+                            <label style="color: white;"  class="login_link" for="user_remember_me" id="remember_me_label">stay signed in</label>
+                          </div>
+                          <div class="clearfix"></div>
+                        </div>
+                  </form><div id="chrome_web_store" style="opacity: 1;"><span id="chrome_logo"></span><h2>Using Google Chrome? <a id="chrome_ad_link" href="#">Get Login</a> for Chrome!</h2></div>
+                    
+                    <div id="dont_have_an_account">
+                      <h2>
+                        Need to <a href="#" class="login_link">sign up</a> for an account
+                        or <a href="#" id="forgot_password_link" class="login_link">reset</a> your password?
+                      </h2>
+                    </div>
+                  </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved |  <i class="icon-heart" aria-hidden="true"></i> 
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+	  </div>
+      </div>
+    </footer>
+    
+  
+
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+<script>
+	// -----------------for-Shopping-cart-------------
+$(document).ready(function(){
+  	update_amounts();
+  	$('.qty, .price').on('keyup keypress blur change', function(e) {
+	  	update_amounts();
+  	});
+});
+function update_amounts(){
+	var sum = 0.0;
+	  	$('#myTable > tbody  > tr').each(function() {
+			var qty = $(this).find('.qty').val();
+		  	var price = $(this).find('.price').val();
+		  	var amount = (qty*price)
+		  	sum+=amount;
+		  	$(this).find('.amount').text(''+amount);
+	  	});
+	$('.total').text(sum);
+}
+
+
+
+//----------------for quantity-increment-or-decrement-------
+var incrementQty;
+var decrementQty;
+var plusBtn  = $(".cart-qty-plus");
+var minusBtn = $(".cart-qty-minus");
+var incrementQty = plusBtn.click(function() {
+	var $n = $(this)
+		.parent(".button-container")
+		.find(".qty");
+	$n.val(Number($n.val())+1 );
+	update_amounts();
+});
+
+var decrementQty = minusBtn.click(function() {
+		var $n = $(this)
+		.parent(".button-container")
+		.find(".qty");
+	var QtyVal = Number($n.val());
+	if (QtyVal > 0) {
+		$n.val(QtyVal-1);
+	}
+	update_amounts();
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+  
+  
+
+    
+  </body>
+</html>

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dreamy Delights</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/PNG" href="hnet.com-image.ico">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+  <link rel="stylesheet" href="css/style.css"> 
+  <style>
+    .body{
+			background: #fb8333;
+			transition: all .5s;
+			padding: 1px;
+		}
+		.veen{
+			width: 70%;
+			margin: 100px auto;
+			background: rgba(255,255,255,.5);
+			min-height: 400px;
+			display:table;
+			position: relative;
+			box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+		}
+		.veen > div {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			color: #fff;
+		}
+		.veen button{
+			background: transparent;
+			background-image: linear-gradient(90deg, #e0b722, #ff4931);
+			display: inline-block;
+			padding: 10px 30px;
+			border: 3px solid #fff;
+			border-radius: 50px;
+			background-clip: padding-box;
+			position: relative;
+			color: #FFF;
+			box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+			transition: all .25s;
+		}
+		.veen button.dark{
+			border-color: #e69108;
+			background: #ffa631;
+		}
+		.veen .move button.dark{
+			border-color: #e0b722;
+			background: #e0b722;
+		}
+		.veen .splits p{
+			font-size: 18px;
+		}
+		.veen button:active{
+			box-shadow: none;			
+		}
+		.veen button:focus{
+			outline: none;			
+		}
+		.veen > .wrapper {
+			position: absolute;
+			width: 40%;
+			height: 120%;
+			top: -10%;
+			left: 5%;
+			background: #fff;
+			box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+			transition: all .5s;
+			color: #303030;
+			overflow: hidden;
+		}
+		.veen .wrapper > form{
+			padding: 15px 30px 30px;
+			width: 100%;
+			transition: all .5s;
+			background: #fff;
+			width: 100%; 
+		}
+.veen .wrapper > form:focus{
+  outline: none;
+}
+		.veen .wrapper #login{
+			padding-top: 20%;
+      visibility: visible;
+		}
+		.veen .wrapper #register{
+			transform: translateY(-80%) translateX(100%);
+      visibility: hidden;
+		}
+		.veen .wrapper.move #register{
+			transform: translateY(-80%) translateX(0%);
+      visibility: visible;
+		}
+		.veen .wrapper.move #login{
+			transform: translateX(-100%);
+      visibility: hidden;
+		}
+		.veen .wrapper > form > div {
+			position: relative;
+			margin-bottom: 15px;
+		}
+		.veen .wrapper label{
+			position: absolute;
+			top: -7px;
+			font-size: 12px;
+			white-space: nowrap;
+			background: #fff;
+			text-align: left;
+			left: 15px;
+			padding: 0 5px;
+			color: #999;
+			pointer-events: none;
+		}
+		.veen .wrapper h3{
+			margin-bottom: 25px;
+		}
+		.veen .wrapper input{
+			height: 40px;
+			padding: 5px 15px;
+			width: 100%;
+			border: solid 1px #999;
+		}
+.veen .wrapper input{
+			height: 40px;
+		  padding: 5px 15px;
+			width: 100%;
+			border: solid 1px #999;
+		}
+		.veen .wrapper input:focus{
+			outline: none;
+			border-color: #d68c37;
+		}
+		.veen > .wrapper.move{
+			left: 45%;
+		}
+		.veen > .wrapper.move input:focus{
+			border-color: #e0b722;
+		}
+		@media (max-width: 767px){
+			.veen{
+				padding: 5px;
+				margin: 0;
+				width: 100%;
+				display: block;
+			}
+			.veen > .wrapper{
+				position: relative;
+				height: auto;
+				top: 0;
+				left: 0;
+				width: 100%;
+			}
+			.veen > div{
+				display: inline-block;
+			}
+			.splits{
+				width: 50%;
+				background: #fff;
+				float: left;
+			}
+			.splits button{
+				width: 100%;
+				border-radius: 0;
+				background: #505050; 
+				border: 0;
+				opacity: .7;
+			}
+			.splits button.active{
+				opacity: 1;
+			}
+			.splits button.active{
+				opacity: 1;
+				background: #ff9f31;
+			}
+			.splits.rgstr-btn button.active{
+				background: #e0b722;
+			}
+			.splits p{
+				display: none;
+			}
+			.veen > .wrapper.move{
+				left: 0%;
+			}
+		}
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill{
+  box-shadow: inset 0 0 0 50px #fff
+}
+  </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Dreamy<small>delights</small></a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+	          <li class="nav-item active"><a href="menu.html" class="nav-link">Menu</a></li>
+	          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            <li class="nav-item"><a href="Blog.html" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+             <li class="nav-item"><a href="Log in.html" class="nav-link">Log in</a></li>
+	          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="room.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+              	<a class="dropdown-item" href="shop.html">Shop</a>
+                <a class="dropdown-item" href="product-single.html">Single Product</a>
+                <!-- <a class="dropdown-item" href="room.html">Cart</a> -->
+                <a class="dropdown-item" href="checkout.html">Checkout</a>
+              </div>
+            </li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	          <li class="nav-item cart"><a href="cart.html" class="nav-link"><span class="icon icon-shopping_cart"></span><span class="bag d-flex justify-content-center align-items-center"><small>1</small></span></a></li>
+	        </ul>
+	      </div>
+		  </div>
+    </nav>
+    <section class="home-slider owl-carousel">
+
+      <div class="slider-item" style="background-image: url(images/bg_3.jpg);" data-stellar-background-ratio="0.5">
+          <div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text justify-content-center align-items-center">
+
+            <div class="col-md-7 col-sm-12 text-center ftco-animate">
+                <h1 class="mb-3 mt-5 bread">Log in</h1>
+                <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+  </section>
+<div class="body">
+		<div class="veen">
+			<div class="login-btn splits">
+				 <img src="images/newcof.gif" height="150" width="150"> 
+				<p>Already an user?</p>
+				<button class="active">Login</button>
+			</div>
+			<div class="rgstr-btn splits">
+				<img src="images/cup.gif" height="150" width="150">
+				<p>Don't have an account?</p>
+				<button>Register</button>
+			</div>
+			<div class="wrapper">
+				<form id="login" tabindex="500">
+					<h3>Login</h3>
+					<div class="mail">
+						<input type="mail" name="" id="email">
+						<label>Mail or Username</label>
+					</div>
+					<div class="passwd">
+						<input type="password" name="" id="password">
+						<label>Password</label>
+					</div>
+					<div class="submit">
+						<button class="dark"  id="signIn">Login</button>
+					</div>
+				</form>
+				<form id="register" tabindex="500">
+					<h3>Register</h3>
+					<div class="name">
+						<input type="text" name="">
+						<label>Full Name</label>
+					</div>
+					<div class="mail">
+						<input type="mail" name="" id="email">
+						<label>Mail</label>
+					</div>
+					<div class="uid">
+						<input type="text" name="">
+						<label>User Name</label>
+					</div>
+					<div class="passwd">
+						<input type="password" name="" id="password">
+						<label>Password</label>
+					</div>
+					<div class="">
+						<button class="dark" id="signUp">Register</button>
+					</div>
+				</form>
+			</div>
+		</div>	
+	</div>
+
+
+	<style type="text/css">
+		.site-link{
+      padding: 5px 15px;
+			position: fixed;
+			z-index: 99999;
+			background: #fff;
+			box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+			right: 30px;
+			bottom: 30px;
+			border-radius: 10px;
+		}
+		.site-link img{
+			width: 30px;
+			height: 30px;
+		}
+	</style>
+ 
+  <!-- FOOTER -->
+  <footer class="ftco-footer ftco-section img">
+    <div class="overlay"></div>
+    <div class="container">
+  <div data-aos="fade-up">
+      <div class="row mb-5">
+        <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">About Us</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+              <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Have a Questions?</h2>
+            <div class="block-23 mb-3">
+              <ul>
+                <li class="ftco-animate"><a href="https://twitter.com/login?lang=en"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+       
+        <div class="col-lg-6 col-md-10 mb-9 mb-md-9">
+           <div class="ftco-footer-widget mb-4 ml-md-4">
+              <div id="login">
+                  <form id="login_form">
+                    <div class="field_container">
+                      <input type="text" placeholder="Email Address">
+                    </div>
+                    
+                    <div class="field_container">
+                      <input type="Password" placeholder="Password">
+                      
+                    </div>
+                    <div class="sig">
+                      <button id="sign_in_button">
+                          <span class="button_text">Sign In</span>
+                        </button>
+                    </div>
+                    
+                    <div id="sign_in_options" class="field_container">
+                        <div id="sign_in_alternatives_container">
+                          <!-- <span id="google_sign_in_option">or you can <a href="#" id="google_sign_in" class="login_link">sign in with Google</a></span> -->
+                          <span id="password_sign_in_option">or you can <a href="#" id="password_sign_in" class="login_link">sign in using a password</a></span>
+                        </div>
+                        <div id="remember_me_container">
+                          <input name="user[remember_me]" type="hidden" value="0"><input id="user_remember_me" name="user[remember_me]" type="checkbox" value="1">
+                          <label style="color: white;"  class="login_link" for="user_remember_me" id="remember_me_label">stay signed in</label>
+                        </div>
+                        <div class="clearfix"></div>
+                      </div>
+                </form><div id="chrome_web_store" style="opacity: 1;"><span id="chrome_logo"></span><h2>Using Google Chrome? <a id="chrome_ad_link" href="#">Get Login</a> for Chrome!</h2></div>
+                  
+                  <div id="dont_have_an_account">
+                    <h2>
+                      Need to <a href="#" class="login_link">sign up</a> for an account
+                      or <a href="#" id="forgot_password_link" class="login_link">reset</a> your password?
+                    </h2>
+                  </div>
+                </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+
+          <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved |  <i class="icon-heart" aria-hidden="true"></i> 
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+        </div>
+      </div>
+  </div>
+    </div>
+  </footer>
+  
+
+
+
+          <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+
+
+
+
+
+
+
+
+  <!-- loader -->
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+<script>
+  
+</script>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/jquery.timepicker.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+<script src="js/google-map.js"></script>
+<script src="js/main.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script  src="https://code.jquery.com/jquery-3.1.1.min.js"  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="  crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" ></script>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+ <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script> 
+
+ <script> 
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyBZKVkpri74uq-4aUknrp6Z8Mw4w3pHR5Y",
+    authDomain: "form-a38cb.firebaseapp.com",
+    databaseURL: "https://form-a38cb.firebaseio.com",
+    projectId: "form-a38cb",
+    storageBucket: "form-a38cb.appspot.com",
+    messagingSenderId: "902201711837",
+    appId: "1:902201711837:web:a96043f1c2e07acb870f34",
+    measurementId: "G-Q12D9V1Y36"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+  const auth=firebase.auth();
+  const db=firebase.firestore();
+
+  db.settings({timestampsInSnapshots: true});
+
+</script>
+
+ 
+<script>
+  $(document).ready(function(){
+			$(".veen .rgstr-btn button").click(function(){
+				$('.veen .wrapper').addClass('move');
+				$('.body').css('background','#fb8333');
+				$(".veen .login-btn button").removeClass('active');
+				$(this).addClass('active');
+
+			});
+			$(".veen .login-btn button").click(function(){
+				$('.veen .wrapper').removeClass('move');
+				$('.body').css('background','#ff4931');
+				$(".veen .rgstr-btn button").removeClass('active');
+				$(this).addClass('active');
+			});
+		});
+</script>
+<script src="auth.js"></script>
+
+
+
+
+</body>
+</html>
